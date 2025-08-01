@@ -14,7 +14,7 @@
       window.initialize = async () => {
         try {
           const response = await axios.post(
-            "https://paystark.loca.lt /payment/initialize",
+            "https://paystark.loca.lt/payment/initialize",
             { email: "test@gmail.com", amount: 50000, callback_url:'https://popup-9wmd.onrender.com/pay.html', metadata: JSON.stringify({userId: "b1a1e1c0-1111-4a1a-8a1a-111111111111"}) }, 
           );
           document.getElementById("response").setAttribute("href", response.data.data.authorization_url)
