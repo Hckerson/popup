@@ -15,7 +15,7 @@
         try {
           const response = await axios.post(
             "https://7a57b71c3873.ngrok-free.app/payment/initialize",
-            { email: "test@gmail.com", amount: 5000 }
+            { email: "test@gmail.com", amount: 5000, reference:'12345678', callback_url: 'https://popup-9wmd.onrender.com/pay.html' }
           );
           document.getElementById("response").setAttribute("href", response.data.data.authorization_url)
           document.getElementById("response").innerHTML = response.data.message
